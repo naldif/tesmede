@@ -36,33 +36,44 @@
                             </button>
                         </div>
                         <?php endif; ?>
-                        <!-- <a href="<?= base_url('/produksi/create'); ?>" class="btn btn-primary">Tambah</a> -->
+                        <div class="col-sm-3 col-md-3" id="form-tahun">
+                            <div class="form-group">
+                                <label>Tahun</label>
+                                <select name="tahun" class="select2 form-control mb-3 custom-select"
+                                    style="width: 100%;" id="filter">
+                                    <option value="">-Select-</option>
+                                    <?php foreach ($tahun as $row) { ?>
+                                    <option value="<?= $row->tahun ?>"><?= $row->tahun ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
                         <hr />
                         <div class="table-responsive">
-                        <table id="datatable" class="table table-bordered">
-                            <thead>
-                                <tr>
-                                  
-                                    <th>Tanggal</th>
-                                    <th>Komoditas</th>
-                                    <th>Jan</th>
-                                    <th>Feb</th>
-                                    <th>Mar</th>
-                                    <th>Apr</th>
-                                    <th>Mei</th>
-                                    <th>Juni</th>
-                                    <th>Juli</th>
-                                    <th>Agus</th>
-                                    <th>Sept</th>
-                                    <th>Okt</th>
-                                    <th>Nov</th>
-                                    <th>Des</th>
-                                </tr>
-                            </thead>
+                            <table id="datatable" class="table table-bordered">
+                                <thead>
+                                    <tr>
+
+                                        <th>Tahun</th>
+                                        <th>Komoditas</th>
+                                        <th>Jan</th>
+                                        <th>Feb</th>
+                                        <th>Mar</th>
+                                        <th>Apr</th>
+                                        <th>Mei</th>
+                                        <th>Juni</th>
+                                        <th>Juli</th>
+                                        <th>Agus</th>
+                                        <th>Sept</th>
+                                        <th>Okt</th>
+                                        <th>Nov</th>
+                                        <th>Des</th>
+                                    </tr>
+                                </thead>
 
 
-                            <tbody>
-                            <?php
+                                <tbody id="tahun">
+                                    <?php
                                 foreach ($lapor as $row) {?>
                                     <tr>
                                         <td><?= $row->tahun; ?></td>
@@ -80,10 +91,10 @@
                                         <td><?= $row->november ?></td>
                                         <td><?= $row->desember ?></td>
                                     </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div> <!-- end col -->

@@ -18,7 +18,7 @@ class Laporan extends BaseController
         // $data['produksi'] = $this->produksi->findAll();
         // $data['produksi'] = $this->produksi->listLaporan()->getResult();
         $data['lapor'] = $this->produksi->listLaporan()->getResult();
-       
+        $data['tahun'] = $this->produksi->getTahun()->getResult();
         return view('laporan/index', $data);
     }
 }

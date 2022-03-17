@@ -27,14 +27,19 @@
    <script src="<?= base_url('themes') ?>/assets/plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
    <script src="<?= base_url('themes') ?>/assets/plugins/clockpicker/jquery-clockpicker.min.js"></script>
    <script src="<?= base_url('themes') ?>/assets/plugins/colorpicker/jquery-asColor.js" type="text/javascript"></script>
-   <script src="<?= base_url('themes') ?>/assets/plugins/colorpicker/jquery-asGradient.js" type="text/javascript"></script>
-   <script src="<?= base_url('themes') ?>/assets/plugins/colorpicker/jquery-asColorPicker.min.js" type="text/javascript"></script>
+   <script src="<?= base_url('themes') ?>/assets/plugins/colorpicker/jquery-asGradient.js" type="text/javascript">
+   </script>
+   <script src="<?= base_url('themes') ?>/assets/plugins/colorpicker/jquery-asColorPicker.min.js"
+       type="text/javascript"></script>
    <script src="<?= base_url('themes') ?>/assets/plugins/select2/select2.min.js" type="text/javascript"></script>
 
-   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js">
+   </script>
    <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
-   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js" type="text/javascript">
+   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"
+       type="text/javascript"></script>
+   <script src="<?= base_url('themes') ?>/assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"
+       type="text/javascript">
    </script>
 
    <!-- Plugins Init js -->
@@ -85,4 +90,15 @@
            });
 
        });
+   </script>
+
+   <script>
+        $(document).ready(function () {
+            $("#filter").on('change', function () {
+                var value = $(this).val().toLowerCase();
+                $("#tahun tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
    </script>

@@ -56,5 +56,13 @@ class produksiModel extends Model
         return $builder->get();
     }
 
+    public function getTahun()
+    {
+        $builder = $this->db->table('view_rekap_laporan');
+        $builder->select('YEAR(tanggal) as tahun');
+        $builder->orderBy('YEAR(tanggal)');
+        $builder->groupBy('YEAR(tanggal)');
+        return $builder->get();
+    }
 
 }
