@@ -16,7 +16,7 @@
                             <li class="breadcrumb-item active">Datatable</li>
                         </ol>
                     </div>
-                    <h4 class="page-title">Datatable</h4>
+                    <h4 class="page-title">Tes Nito PT Mede Media Softika</h4>
                 </div>
             </div>
         </div>

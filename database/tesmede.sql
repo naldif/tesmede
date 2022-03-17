@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 17, 2022 at 08:21 AM
+-- Generation Time: Mar 17, 2022 at 08:26 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.3.28
 
@@ -74,7 +74,10 @@ INSERT INTO `produksi` (`id`, `komoditas_kode`, `produksi`, `tanggal`) VALUES
 (10, '1', 9000, '2022-03-16'),
 (11, '5', 900, '2022-03-23'),
 (12, '5', 120, '2022-04-06'),
-(13, '5', 200, '2022-04-08');
+(13, '5', 200, '2022-04-08'),
+(14, '8', 100, '2022-07-20'),
+(15, '8', 1000, '2022-01-12'),
+(16, '8', 1000, '2022-01-13');
 
 -- --------------------------------------------------------
 
@@ -128,7 +131,7 @@ ALTER TABLE `komoditas`
 -- AUTO_INCREMENT for table `produksi`
 --
 ALTER TABLE `produksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
