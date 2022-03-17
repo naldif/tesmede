@@ -32,14 +32,16 @@ class produksiModel extends Model
         }   
     }
 
-    // public function getLaporan()
-    // {
-    //     $builder = $this->db->table('produksi');
-    //     $builder->select("COUNT(produksi) as komo, MONTH(tanggal) as month");
-    //     $builder->groupBy("MONTH(tanggal), komoditas_kode");
-    //     $builder->where('YEAR(tanggal)', date('Y'));
-    //     // $builder->where('MONTH(tanggal)', date('m'));
-    //     return $builder->get();
-  
-    // }
+    public function listLaporan()
+    {
+        $builder = $this->db->table('produksi');
+        $builder->select('produksi.*, komoditas.komoditas_nama, SUM(produksi) as total');
+        $builder->join('komoditas','komoditas.id = produksi.komoditas_kode');
+        $builder->groupBy("komoditas_kode, MONTH(tanggal)");
+      
+        
+
+        return $builder->get();
+    }
+
 }

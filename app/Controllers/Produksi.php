@@ -40,10 +40,10 @@ class Produksi extends BaseController
                 ]
             ],
             'komoditas_kode' => [
-                'rules' => 'required|is_unique[produksi.komoditas_kode]',
+                'rules' => 'required',
                 'errors' => [
                     'required' => '{field} Harus diisi',
-                    'is_unique' => '{field} Tidak boleh sama'
+                    // 'is_unique' => '{field} Tidak boleh sama'
                 ]
             ],
             'produksi' => [

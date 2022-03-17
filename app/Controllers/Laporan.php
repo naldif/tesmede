@@ -16,8 +16,9 @@ class Laporan extends BaseController
     {
         $data['active_menu'] = 'laporan';
         // $data['produksi'] = $this->produksi->findAll();
-        $data['produksi'] = $this->produksi->listProduksi()->getResult();
-        // $laporan = $this->produksi->getLaporan()->getResult();
+        // $data['produksi'] = $this->produksi->listLaporan()->getResult();
+        $laporan = $this->produksi->listLaporan()->getResultArray();
+        dd($laporan);
        
         return view('laporan/index', $data);
     }
