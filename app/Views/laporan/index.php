@@ -63,22 +63,22 @@
 
                             <tbody>
                             <?php
-                                foreach ($produksi as $row) {?>
+                                foreach ($lapor as $row) {?>
                                     <tr>
-                                        <td><?= date('Y',strtotime($row->tanggal)); ?></td>
+                                        <td><?= $row->tahun; ?></td>
                                         <td><?= $row->komoditas_nama; ?></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <td><?= $row->januari ?></td>
+                                        <td><?= $row->februari ?></td>
+                                        <td><?= $row->maret ?></td>
+                                        <td><?= $row->april ?></td>
+                                        <td><?= $row->mei ?></td>
+                                        <td><?= $row->juni ?></td>
+                                        <td><?= $row->juli ?></td>
+                                        <td><?= $row->agustus ?></td>
+                                        <td><?= $row->september ?></td>
+                                        <td><?= $row->oktober ?></td>
+                                        <td><?= $row->november ?></td>
+                                        <td><?= $row->desember ?></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
