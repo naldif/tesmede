@@ -49,7 +49,9 @@ class produksiModel extends Model
         SUM( IF( MONTH(tanggal) = 10, produksi, 0) ) AS oktober, 
         SUM( IF( MONTH(tanggal) = 11, produksi, 0) ) AS november, 
         SUM( IF( MONTH(tanggal) = 12, produksi, 0) ) AS desember, 
+        SUM(produksi) as total
         ');
+
         $builder->groupBy("komoditas_nama, YEAR(tanggal)");
         // $builder->where('YEAR(tanggal)', date('Y'));
 

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Mar 17, 2022 at 08:26 AM
+-- Host: localhost
+-- Generation Time: Mar 18, 2022 at 03:36 AM
 -- Server version: 5.7.33
--- PHP Version: 7.3.28
+-- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -77,7 +77,13 @@ INSERT INTO `produksi` (`id`, `komoditas_kode`, `produksi`, `tanggal`) VALUES
 (13, '5', 200, '2022-04-08'),
 (14, '8', 100, '2022-07-20'),
 (15, '8', 1000, '2022-01-12'),
-(16, '8', 1000, '2022-01-13');
+(16, '8', 1000, '2022-01-13'),
+(17, '7', 200, '2021-12-08'),
+(18, '7', 100, '2021-12-22'),
+(19, '7', 150, '2021-11-19'),
+(20, '7', 15000, '2021-11-08'),
+(21, '8', 100, '2022-03-31'),
+(22, '8', 200, '2022-03-30');
 
 -- --------------------------------------------------------
 
@@ -131,7 +137,7 @@ ALTER TABLE `komoditas`
 -- AUTO_INCREMENT for table `produksi`
 --
 ALTER TABLE `produksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
